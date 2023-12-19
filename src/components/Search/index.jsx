@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Search.module.css";
+import gitlogo from '../../assets/icone-github-noir.png'
 
 const Search = ({ nomeUsuario, onChangeContent }) => {
     const [content, setContent] = useState('');
@@ -30,7 +31,7 @@ const Search = ({ nomeUsuario, onChangeContent }) => {
 
     return (
         <div className={nomeUsuario ? styles.formComUsuario : styles.formSemUsuario}>
-            <img className={styles.logo} src="../src/assets/icone-github-noir.png" alt="Logo Github" />
+            <img className={styles.logo} src={gitlogo} alt="Logo Github" />
             <h1>Repositórios GitHub</h1>
             <div>
                 <input type="text" placeholder="Escreva seu Github" onChange={changeContent}/>
