@@ -1,0 +1,50 @@
+h1 {
+    font-size: 18px;
+}
+
+.formSemUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 100vw;
+    margin-top: 20vh;
+}
+
+.formComUsuario {
+    display: none;
+}
+
+.logo {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 32px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--corSecundaria);
+    text-shadow: none;
+    background: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    transition: 0.5s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--corSecundaria);
+    background: #343434;
+    border: 1px solid var(--corPrincipal);
+}

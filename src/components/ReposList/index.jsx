@@ -13,7 +13,7 @@ const ReposList = ({ nomeUsuario }) => {
             setTimeout(() => {
                 setEstaCarregando(false);
                 setRepos(resJson)
-            },3000);
+            },2000);
         })
     }, [nomeUsuario])
 
@@ -23,7 +23,6 @@ const ReposList = ({ nomeUsuario }) => {
                 <h1>Carregando...</h1>
             ) : (
                 <ul className={styles.list}>
-                    {/* {repos.map(repositorio => ( */}
                     {repos.map(({ id, name, language, html_url }) => (
                         <li className={styles.listItem} key={id}>
                             <div className={styles.itemName}>
