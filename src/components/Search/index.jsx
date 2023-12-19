@@ -9,9 +9,23 @@ const Search = ({ nomeUsuario, onChangeContent }) => {
 
         setContent(inputContent)
     }
-    
+
     function handleChangeContent() {
-        onChangeContent(content)
+        if (content.length === 0) {
+            alert('Por favor, preencha o campo de usuário.');
+        } else {
+            fetch(`https://api.github.com/users/${content}/repos`)
+                .then(res => {
+                    if (res.status === 404) {
+                        alert('Usuário não encontrado.');
+                    } else {
+                        onChangeContent(content);
+                    }
+                })
+                .catch(erro => {
+                    alert('Ocorreu um erro ao buscar o usuário do Github fornecido, tente novamente mais tarde.');
+                });
+        }
     }
 
     return (

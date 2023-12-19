@@ -4,6 +4,7 @@ import styles from './ReposList.module.css';
 const ReposList = ({ nomeUsuario }) => {
     const [repos, setRepos] = useState([]);
     const [estaCarregando, setEstaCarregando] = useState(true)
+    const [usuarioNaoEncontrado, setUsuarioNaoEncontrado] = useState(false);
 
     useEffect(() => {
         setEstaCarregando(true);
@@ -13,7 +14,7 @@ const ReposList = ({ nomeUsuario }) => {
             setTimeout(() => {
                 setEstaCarregando(false);
                 setRepos(resJson)
-            },2000);
+            },1000);
         })
     }, [nomeUsuario])
 
@@ -41,5 +42,6 @@ const ReposList = ({ nomeUsuario }) => {
         </div>
     )
 }
+
 
 export default ReposList;

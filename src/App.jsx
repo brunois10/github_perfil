@@ -6,6 +6,7 @@ import ReposList from "./components/ReposList";
 
 function App() {
   const [nomeUsuario, setNomeUsuario] = useState('');
+  
 
   function onChangeContent(content) {
     setNomeUsuario(content)
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <Search nomeUsuario={nomeUsuario} onChangeContent={onChangeContent}/>
-      {nomeUsuario.length > 4 && (
+      {nomeUsuario.length >= 1 && (
         <>
           <Perfil nomeUsuario={nomeUsuario} />
           <ReposList nomeUsuario={nomeUsuario} />
