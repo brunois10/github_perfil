@@ -7,8 +7,9 @@
             grid-template-columns: 1fr;
         }
 
-        @media (min-width: 769px) and (max-width: 1023px) {
+        @media (min-width: 769px) and (max-width: 1300px) {
             grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 }
 
